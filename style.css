@@ -1,0 +1,360 @@
+html,
+body * {
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background: linear-gradient(
+      rgba(246, 247, 249, 0.8),
+      rgba(246, 247, 249, 0.8)
+    ),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg)
+      no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+.container {
+  width: 100%;
+}
+
+.frame {
+  height: 600px;
+  width: 430px;
+  background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg)
+      no-repeat center center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.frame-long {
+  height: 615px;
+}
+
+.frame-short {
+  height: 400px;
+  margin-top: 50px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  padding-top: 40px;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+li {
+  padding-left: 10px;
+  font-size: 18px;
+  display: inline;
+  text-align: left;
+  text-transform: uppercase;
+  padding-right: 10px;
+  color: #ffffff;
+}
+.form-signin {
+  width: 430px;
+  height: 375px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 25px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form-signin-left {
+  transform: translateX(-400px);
+  opacity: 0;
+}
+.success {
+  width: 80%;
+  height: 150px;
+  text-align: center;
+  position: relative;
+  top: -890px;
+  left: 450px;
+  opacity: 0;
+  transition: all 0.8s 0.4s ease;
+}
+
+.success-left {
+  transform: translateX(-406px);
+  opacity: 1;
+}
+
+.successtext {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: -35px;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+
+#check path {
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.85px;
+  stroke-dasharray: 60px 300px;
+  stroke-dashoffset: -166px;
+  fill: rgba(255, 255, 255, 0);
+  transition: stroke-dashoffset 2s ease 0.5s, fill 1.5s ease 1s;
+}
+
+#check.checked path {
+  stroke-dashoffset: 33px;
+  fill: rgba(255, 255, 255, 0.03);
+}
+
+.form-signin input,
+.form-signup input {
+  color: #5c5a5a;
+  font-weight: 600;
+  font-size: 13px;
+}
+::placeholder {
+  font-weight: 300;
+  color: rgb(205, 195, 195);
+}
+.form-styling {
+  width: 100%;
+  height: 35px;
+  padding-left: 15px;
+  border: none;
+  margin-bottom: 20px;
+  background: white;
+}
+
+label {
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+
+:focus {
+  outline: none;
+}
+
+.form-signin input:focus,
+textarea:focus,
+.form-signup input:focus,
+textarea:focus {
+  border: none;
+  padding-right: 40px;
+  transition: background 0.5s ease;
+}
+.btn-signin {
+  color: white;
+  float: left;
+  text-decoration: none;
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: -8px;
+}
+
+.btn-animate {
+  float: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 23px;
+  background-color: rgba(16, 89, 255, 1);
+  left: 0px;
+  top: 0px;
+  transition: all 0.5s ease, top 0.5s ease 0.5s, height 0.5s ease 0.5s,
+    background-color 0.5s ease 0.75s;
+}
+
+a.btn-signup:hover,
+a.btn-signin:hover {
+  cursor: pointer;
+  background-color: #0f4fe6;
+  transition: background-color 0.5s;
+}
+h1 {
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* refresh button styling */
+
+#refresh {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #52587a;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+  padding: 13px 0 0 13px;
+}
+
+.refreshicon {
+  fill: #d3d3d3;
+  transform: rotate(0deg);
+  transition: fill 0.25s ease, transform 0.25s ease;
+}
+
+.refreshicon:hover {
+  cursor: pointer;
+  fill: #ffffff;
+  transform: rotate(180deg);
+}
+.dropdown {
+  width: 100%;
+  position: relative;
+}
+.dropdown * {
+  box-sizing: border-box;
+}
+.select {
+  background: white;
+  color: #5c5a5a;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 15px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+.caret {
+  width: 0;
+
+  height: 0;
+
+  border-left: 5px solid transparent;
+
+  border-right: 5px solid transparent;
+
+  border-top: 6px solid #000000;
+
+  transition: 0.3s;
+}
+.caret-rotate {
+  transform: rotate(180deg);
+}
+.menu {
+  list-style: none;
+
+  padding: 0.2em 0.5em;
+
+  background: white;
+
+  border: 1px #363a43 solid;
+
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+
+  border-radius: 0.5em;
+
+  color: #23242a;
+
+  position: absolute;
+
+  left: 50%;
+
+  width: 100%;
+  transform: translateX(-50%);
+
+  opacity: 0;
+
+  display: none;
+
+  transition: 0.2s;
+
+  z-index: 1;
+}
+.menu li {
+  color: #5c5a5a;
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  padding: 5px 15px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.menu li:hover {
+  background: #f2f2f5;
+}
+.active {
+  background: #c3c3c3;
+}
+.menu-open {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+.error {
+  background-color: white;
+  height: 35px;
+  display: none;
+  align-items: center;
+}
+.error a i {
+  padding: 3px 8px;
+  font-size: 12px;
+  border: 1px solid rgb(245, 115, 115);
+  border-radius: 100%;
+  margin-right: 6px;
+  color: rgb(239, 43, 43);
+  display: flex;
+  align-items: center;
+}
+.info a i {
+  padding: 4px 6px;
+  margin-left: 8px;
+  font-size: 10px;
+  border-radius: 100%;
+  margin-right: 6px;
+  color: rgb(53, 48, 48);
+  background-color: #c5c5c5;
+  display: flex;
+  align-items: center;
+}
+.info a {
+  padding-bottom: 8px;
+}
+@media (max-width: 450px) {
+  .frame {
+    width: 100%;
+  }
+  .form-signin {
+    width: 100%;
+  }
+}
