@@ -38,7 +38,8 @@ var age = document.getElementById("age");
 var ageerr = document.getElementById("ageerr");
 var deductions = document.getElementById("deductions");
 var deductionserr = document.getElementById("deductionserr");
-var taxval = document.getElementById("tax");
+var netincome = document.getElementById("tax");
+var taxval = document.getElementById("taxval");
 function checkincome() {
   if (income.value.length > 0 && isNaN(income.value)) {
     incomeerr.style.display = "flex";
@@ -84,16 +85,21 @@ function handlesubmit() {
       parseFloat(exincome.value) -
       parseFloat(deductions.value);
     console.log(newincome);
+    var tax = 0;
     if (newincome > 800000) {
       if (age.innerText == "< 40") {
+        tax = 0.3 * (newincome - 800000);
         newincome = newincome - 0.3 * (newincome - 800000);
       } else if (age.innerText == "≥ 40 & < 60") {
+        tax = 0.4 * (newincome - 800000);
         newincome = newincome - 0.4 * (newincome - 800000);
       } else {
+        tax = 0.1 * (newincome - 800000);
         newincome = newincome - 0.1 * (newincome - 800000);
       }
     }
-    taxval.innerHTML = "Rs. " + newincome;
+    netincome.innerHTML = "Rs. " + newincome;
+    taxval.innerHTML += "Rs. " + tax;
     $(function () {
       $("#exampleModal").modal("show");
     });
