@@ -99,7 +99,7 @@ function handlesubmit() {
       }
     }
     netincome.innerHTML = "Rs. " + newincome;
-    taxval.innerHTML += "Rs. " + tax;
+    taxval.innerHTML += "after tax deductions of Rs. " + tax;
     $(function () {
       $("#exampleModal").modal("show");
     });
